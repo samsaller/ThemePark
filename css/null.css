@@ -1,0 +1,80 @@
+/* https://coolors.co/0a0f1c-121826-00ffff-7d7aff-a0a8b3-ffffff */
+:root {
+    --background: #0a0f1c;
+    --backgroundsecondary: #121826;
+    --primary: #00ffff;
+    --primary-muted: #004c69;
+    --primarylight: #7d7aff;
+    --text: #ffffff;
+    --text-muted: #a0a8b3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.1s;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+.muted {
+    color: var(--text-muted);
+}
+.background-secondary {
+    background: var(--backgroundsecondary);
+}
+.primary {
+    color: var(--primary);
+}
+.primary-light {
+    color: var(--primarylight);
+}
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gradient-from-left {
+    background: radial-gradient(
+        circle at bottom right,
+        var(--primary-muted) 0%,
+        var(--backgroundsecondary) 50%,
+        var(--background) 100%
+    );
+}
+.gradient-from-right {
+    background: radial-gradient(
+        circle at bottom left,
+        var(--primary-muted) 0%,
+        var(--backgroundsecondary) 50%,
+        var(--background) 100%
+    );
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+.abutton{
+    display: block;
+    width: fit-content;
+    padding: 15px 30px;
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    margin: 0 auto;
+}
+.abutton:hover{
+    background: var(--primary);
+    color: var(--background);
+    scale: 1.1;
+    box-shadow: 0 0 10px var(--primary);
+}

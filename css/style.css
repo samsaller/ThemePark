@@ -1,0 +1,234 @@
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+}
+.nav-item {
+    position: relative;
+}
+.nav-item::before {
+    content: "";
+    width: 0%;
+    transition: 0.1s;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primarylight);
+    display: block;
+}
+.nav-item:hover {
+    color: var(--primarylight);
+}
+.nav-item:hover::before {
+    width: 100%;
+}
+
+.hero {
+    height: 80vh;
+    position: relative;
+}
+
+.hero-ball1,
+.hero-ball2 {
+    position: absolute;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    filter: blur(1px);
+    opacity: 0.5;
+}
+.hero-ball1 {
+    top: 20%;
+    left: 20%;
+    width: 300px;
+    height: 300px;
+}
+
+.hero-ball2 {
+    bottom: 10%;
+    right: 10%;
+}
+.hero-title {
+    font-size: 100px;
+    text-align: center;
+    color: var(--primary);
+    text-shadow: 0px 0px 10px var(--primary);
+}
+.hero > .container {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+}
+.hero-subtitle {
+    font-size: 40px;
+}
+.hero-quote {
+    font-size: 30px;
+    color: var(--primarylight);
+    text-shadow: 0px 0px 10px var(--primarylight);
+}
+.scrolldown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.scrolldown-arrow {
+    width: 30px;
+    animation: infinite scrolldown 1s;
+}
+@keyframes scrolldown {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.scrolldown-arrow img {
+    width: 100%;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.subtitle {
+    font-size: 24px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+section {
+    padding: 20px 0;
+}
+section:nth-of-type(odd) {
+    background: radial-gradient(
+        circle at bottom left,
+        var(--primary-muted) 0%,
+        var(--backgroundsecondary) 50%,
+        var(--background) 100%
+    );
+}
+section:nth-of-type(even) {
+    background: radial-gradient(
+        circle at bottom right,
+        var(--primary-muted) 0%,
+        var(--backgroundsecondary) 50%,
+        var(--background) 100%
+    );
+}
+
+section > .container.divided {
+    display: flex;
+    gap: 40px;
+}
+.divided .right, .divided .left {
+    flex: 1;
+    align-self: center;
+}
+.section-img{
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.section-img img{
+    width: 100%;
+}
+.title.centered{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.cards{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card{
+    flex: 1;
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--backgroundsecondary);
+    border: var(--primary) 1px solid;
+    transition: 0.2s ease-out;
+}
+.card:hover{
+    box-shadow: 0px 0px 20px 1px var(--primary);
+    scale: 1.02;
+}
+.card-img{
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card-img img{
+    width: 100%;
+}
+.card-title{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0 0;
+    color: var(--primary);
+    text-align: center;
+}
+.card-subtitle{
+    text-align: center;
+    font-size: 18px;
+    color: var(--primarylight);
+    margin-bottom: 10px;
+}
+.card-description{
+    font-size: 16px;
+    color: var(--text-muted);
+    text-align: center;
+}
+section > .container > p{
+    color: var(--text-muted);
+}
+
+footer{
+    padding: 20px 0;
+    text-align: center;
+    color: var(--text-muted);
+    background: var(--backgroundsecondary);
+}
+section .abutton{
+    margin-top: 40px;
+}
+nav{
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    
+}
+body{
+    position: relative;
+}
+.subtitle.centered{
+    text-align: center;
+    color: var(--primarylight);
+}
+.title.centered.subtitled{
+    margin-bottom: 0;
+}
