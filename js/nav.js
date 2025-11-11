@@ -4,10 +4,10 @@ const burgerContainer = document.querySelector(".burger-container");
 const nav = document.querySelector("nav");
 
 const navLinksObj = [
-    { text: "Blank", href: "#" },
-    { text: "Blank", href: "#" },
-    { text: "Blank", href: "#" },
-    { text: "Blank", href: "#" },
+    { text: "Attractions", href: "/pages/attractions.html" },
+    { text: "Blank2", href: "#" },
+    { text: "Blank3", href: "#" },
+    { text: "Blank4", href: "#" },
 ];
 // <ul class="nav-links">
 //     <li class="muted nav-item"><a href="#">Blank</a></li>
