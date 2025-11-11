@@ -6,6 +6,7 @@ nav .container {
 .logo {
     font-size: 32px;
     font-weight: bold;
+    text-shadow: 0px 0px 5px var(--text);
 }
 .nav-links {
     display: flex;
@@ -215,12 +216,14 @@ section .abutton{
     margin-top: 40px;
 }
 nav{
-    position: sticky;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 1;
     width: 100%;
-    
+    border-bottom: 1px solid transparent;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 body{
     position: relative;
@@ -231,4 +234,37 @@ body{
 }
 .title.centered.subtitled{
     margin-bottom: 0;
+}
+.burger{
+    display: none;
+}
+.burger::before,
+.burger::after{
+    transition: 0.1s;
+}
+.burger{
+    user-select: none;
+}
+.container.burger-container{
+    display: none;
+}
+nav.scrolled{
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px var(--backgroundsecondary);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom: 1px solid var(--primary);
+}
+nav:has(.active){
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px var(--backgroundsecondary);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom: 1px solid var(--primary);
+}
+.hero{
+    padding-top: 80px;
+}
+.hero-home{
+    height: 100dvh;
 }
