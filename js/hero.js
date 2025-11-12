@@ -1,27 +1,61 @@
-const ball1 = document.querySelector('.hero-ball1');
-const ball2 = document.querySelector('.hero-ball2');
+const ball1 = document.querySelector(".hero-ball1");
+const ball2 = document.querySelector(".hero-ball2");
+const heroQuote = document.querySelector(".hero-quote-home");
 
-const heroTitles = [
+const heroQuotes = [
     "THE FUTURE OF FUN",
     "WHERE GAMES COME ALIVE",
     "PLAY. HAVE FUN. CONNECT.",
     "YOUR ADVENTURE AWAITS",
     "LEVEL UP YOUR LIFE",
     "DISCOVER. PLAY. ENJOY.",
-]
+];
 
-const heroTitleElement = document.querySelector('.hero-title');
-
-function moveBalls(e){
+function moveBalls() {
     let x1 = Math.sin(Date.now() / 500) * 10;
     let y1 = Math.cos(Date.now() / 1000) * 20;
     let x2 = Math.cos(Date.now() / 1000) * 20;
     let y2 = Math.sin(Date.now() / 1000) * 10;
 
-    ball1.style = `transform: translate(${x1}px, ${y1}px)`
-    ball2.style = `transform: translate(${x2}px, ${y2}px)`
-
-    requestAnimationFrame(moveBalls);
+    ball1.style = `transform: translate(${x1}px, ${y1}px)`;
+    ball2.style = `transform: translate(${x2}px, ${y2}px)`;
 }
 
-moveBalls()
+let currentTitleIndex = 0;
+let titleChangeInterval = 3000;
+let fadeDuration = 500;
+
+function changeQuote() {
+    const oldLetterList = heroQuotes[currentTitleIndex].split("");
+
+    currentTitleIndex = (currentTitleIndex + 1) % heroQuotes.length;
+
+    const newLetterList = heroQuotes[currentTitleIndex].split("");
+
+    let eachOldLetterDelay = fadeDuration / oldLetterList.length;
+    let eachNewLetterDelay = fadeDuration / newLetterList.length;
+
+    oldLetterList.forEach((letter, index) => {
+        setTimeout(() => {
+            heroQuote.textContent = heroQuote.textContent.slice(0, -1);
+        }, index * eachOldLetterDelay);
+    });
+    newLetterList.forEach((letter, index) => {
+        setTimeout(() => {
+            heroQuote.textContent += letter;
+        }, fadeDuration + index * eachNewLetterDelay);
+    })
+}
+if(heroQuote){
+    changeQuote();
+    setInterval(() => {
+        changeQuote();
+    }, titleChangeInterval);
+}
+
+function animateHero() {
+    moveBalls();
+    requestAnimationFrame(animateHero);
+}
+
+animateHero();
