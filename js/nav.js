@@ -3,9 +3,11 @@ const navContainer = document.querySelector(".nav-container");
 const burgerContainer = document.querySelector(".burger-container");
 const nav = document.querySelector("nav");
 
+const inPages = window.location.pathname.includes("/pages/");
+const basePath = inPages ? "../" : "./";
 const navLinksObj = [
-    { text: "Attractions", href: "/pages/attractions.html" },
-    { text: "Contact Us", href: "/pages/contact.html" },
+    { text: "Attractions", href: basePath + "pages/attractions.html" },
+    { text: "Contact Us", href: basePath + "pages/contact.html" },
     { text: "Blank3", href: "#" },
     { text: "Blank4", href: "#" },
 ];
@@ -18,7 +20,7 @@ const navLinksObj = [
 
 function createNavLinks() {
     const burgerStyle = window.getComputedStyle(burger);
-    
+
     document.querySelector(".nav-links")?.remove();
 
     const navLinks = document.createElement("ul");
@@ -53,11 +55,10 @@ window.addEventListener("resize", () => {
     createNavLinks();
 });
 
-
-window.addEventListener("scroll", (e)=>{
-    if(window.scrollY){
+window.addEventListener("scroll", (e) => {
+    if (window.scrollY) {
         nav.classList.add("scrolled");
     } else {
         nav.classList.remove("scrolled");
     }
-})
+});
