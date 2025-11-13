@@ -5,7 +5,7 @@ const nav = document.querySelector("nav");
 
 const navLinksObj = [
     { text: "Attractions", href: "/pages/attractions.html" },
-    { text: "Contact Us223", href: "/pages/contact.html" },
+    { text: "Contact Us", href: "/pages/contact.html" },
     { text: "Blank3", href: "#" },
     { text: "Blank4", href: "#" },
 ];
