@@ -85,6 +85,7 @@ nav .container {
     font-size: 30px;
     color: var(--primarylight);
     text-shadow: 0px 0px 10px var(--primarylight);
+    text-align: center;
 }
 .scrolldown {
     display: flex;
@@ -328,4 +329,7 @@ nav:has(.active) {
     font-weight: bold;
     cursor: pointer;
     transition: 0.2s;
+}
+.hero-quote-timer span{
+    font-weight: bold;
 }
