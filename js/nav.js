@@ -8,8 +8,10 @@ const basePath = inPages ? "../" : "./";
 const navLinksObj = [
     { text: "Attractions", href: basePath + "pages/attractions.html" },
     { text: "Contact Us", href: basePath + "pages/contact.html" },
-    { text: "Blank3", href: "#" },
-    { text: "Blank4", href: "#" },
+    { text: "Map", href: basePath + "pages/map.html" },
+    { text: "Tickets", href: basePath + "pages/tickets.html" },
+    { text: "Blank5", href: basePath + "#" },
+    { text: "Blank6", href: basePath + "#" },
 ];
 // <ul class="nav-links">
 //     <li class="muted nav-item"><a href="#">Blank</a></li>
