@@ -10,7 +10,7 @@ const navLinksObj = [
     { text: "Contact Us", href: basePath + "pages/contact.html" },
     { text: "Map", href: basePath + "pages/map.html" },
     { text: "Tickets", href: basePath + "pages/tickets.html" },
-    { text: "Blank5", href: basePath + "#" },
+    { text: "About Us", href: basePath + "pages/about.html" },
     { text: "Blank6", href: basePath + "#" },
 ];
 // <ul class="nav-links">
