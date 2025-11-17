@@ -1,3 +1,4 @@
+const showcaseEl = document.querySelector(".showcase");
 const profilesEl = document.querySelector(".profiles");
 
 const profiles = [
@@ -34,33 +35,56 @@ const profiles = [
     },
 ];
 
-profiles.forEach((profile) => {
+function addProfile(img, name, id, text, El) {
     const profileEl = document.createElement("div");
     profileEl.classList.add("profile");
 
     const profileImgEl = document.createElement("img");
-    profileImgEl.setAttribute("src", profile.img);
-    profileImgEl.setAttribute("alt", profile.name);
+    profileImgEl.setAttribute("src", img);
+    profileImgEl.setAttribute("alt", name);
 
     const profileImgBoxEl = document.createElement("div");
     profileImgBoxEl.classList.add("profile-img");
-    profileImgBoxEl.appendChild(profileImgEl)
-    profileEl.appendChild(profileImgBoxEl)
+    profileImgBoxEl.appendChild(profileImgEl);
+    profileEl.appendChild(profileImgBoxEl);
 
     const profileNameEl = document.createElement("div");
     profileNameEl.classList.add("profile-name");
-    profileNameEl.textContent = profile.name;
-    profileEl.appendChild(profileNameEl)
+    profileNameEl.textContent = name;
+    profileEl.appendChild(profileNameEl);
 
     const profileIDEl = document.createElement("div");
     profileIDEl.classList.add("profile-id");
-    profileIDEl.textContent = profile.id;
-    profileEl.appendChild(profileIDEl)
+    profileIDEl.textContent = id;
+    profileEl.appendChild(profileIDEl);
 
     const profileTextEl = document.createElement("div");
     profileTextEl.classList.add("profile-text");
-    profileTextEl.innerHTML = profile.text;
-    profileEl.appendChild(profileTextEl)
+    profileTextEl.innerHTML = text;
+    profileEl.appendChild(profileTextEl);
 
-    profilesEl.appendChild(profileEl)
+    El.appendChild(profileEl);
+}
+
+profiles.forEach((profile) => {
+    addProfile(profile.img, profile.name, profile.id, profile.text, profilesEl);
 });
+
+let lastAddedProfile = 0;
+addProfile(
+    profiles[lastAddedProfile].img,
+    profiles[lastAddedProfile].name,
+    profiles[lastAddedProfile].id,
+    profiles[lastAddedProfile].text,
+    showcaseEl
+);
+
+const showcaseProfileEl = document.querySelector(".showcase .profile");
+setInterval(() => {
+    lastAddedProfile = (lastAddedProfile + 1) % profiles.length;
+    showcaseProfileEl.querySelector(".profile-img img").setAttribute("src", profiles[lastAddedProfile].img);
+    showcaseProfileEl.querySelector(".profile-img").setAttribute("alt", profiles[lastAddedProfile].name);
+    showcaseProfileEl.querySelector(".profile-name").textContent = profiles[lastAddedProfile].name;
+    showcaseProfileEl.querySelector(".profile-id").textContent = profiles[lastAddedProfile].id;
+    showcaseProfileEl.querySelector(".profile-text").innerHTML = profiles[lastAddedProfile].text;
+}, 3000);

@@ -404,7 +404,7 @@ section {
 }
 
 .profile {
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(5px);
     padding: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -424,7 +424,8 @@ section {
     transform: perspective(0px) rotateY(0deg) rotateX(0deg);
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    height: 580px;
+    min-height: 580px;
+    max-height: 580px;
     gap: 10px;
 }
 
@@ -439,6 +440,8 @@ section {
     z-index: 1;
     opacity: 0.2;
     transform: rotate(30deg) translateX(-50%);
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 .profile::after {
@@ -452,6 +455,8 @@ section {
     z-index: 1;
     opacity: 0.2;
     transform: rotate(30deg) translateX(-50%);
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes rotation-before {
@@ -495,19 +500,15 @@ section {
     animation-name: rotation;
     opacity: 1 !important;
 }
-.profiles:has(> .profile:hover) .profile{
+.profiles:has(> .profile:hover) .profile {
     opacity: 0.2;
 }
-.profile:hover:before{
+.profile:hover:before {
     animation-name: rotation-before;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
 }
 
-.profile:hover:after{
+.profile:hover:after {
     animation-name: rotation-after;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
 }
 
 .profile-img {
@@ -541,4 +542,25 @@ section {
 }
 .profile-text span {
     font-weight: bold;
+}
+.showcase {
+    gap: 100px;
+    padding: 30px 0;
+}
+
+.showcase .profile {
+    animation-name: rotation;
+    box-shadow: 0px 0px 30px -20px var(--primary);
+}
+.showcase .profile:hover {
+    scale: none;
+}
+.showcase .profile::before {
+    animation-name: rotation-before;
+}
+.showcase .profile::after {
+    animation-name: rotation-after;
+}
+.aboutus-scrolldown{
+    padding-top: 10px;
 }
