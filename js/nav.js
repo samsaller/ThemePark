@@ -19,9 +19,14 @@ const navLinksObj = [
 //     <li class="muted nav-item"><a href="#">Blank</a></li>
 //     <li class="muted nav-item"><a href="#">Blank</a></li>
 // </ul>
-
+let lastBurgerState;
 function createNavLinks() {
     const burgerStyle = window.getComputedStyle(burger);
+    let currentBurgerState = burgerStyle.getPropertyValue("display")
+    if(lastBurgerState === currentBurgerState){
+        return;
+    }
+    lastBurgerState = currentBurgerState;
 
     document.querySelector(".nav-links")?.remove();
 
@@ -40,7 +45,7 @@ function createNavLinks() {
         navLinks.appendChild(li);
     });
 
-    if (burgerStyle.getPropertyValue("display") === "none") {
+    if (currentBurgerState === "none") {
         navContainer.appendChild(navLinks);
     } else {
         burgerContainer.appendChild(navLinks);

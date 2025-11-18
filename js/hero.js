@@ -23,7 +23,8 @@ function moveBalls() {
 
 let currentTitleIndex = 0;
 let titleChangeInterval = 3000;
-let fadeDuration = 500;
+let overallFadeDuration = 1000;
+let fadeDuration = overallFadeDuration / 2;
 
 function changeQuote() {
     const oldLetterList = heroQuotes[currentTitleIndex].split("");
