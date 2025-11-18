@@ -109,7 +109,7 @@
     }
     .container.burger-container {
         display: flex;
-        height: 100vh;
+        height: calc(100dvh - 80px);
     }
     .container.burger-container.deactive {
         height: 0;
@@ -118,8 +118,10 @@
     .nav-links {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         width: 100%;
+        height: 100%;
+        padding: 20px 0;
         opacity: 1;
     }
     .burger-container.deactive .nav-links{

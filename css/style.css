@@ -15,6 +15,7 @@ nav .container {
     display: flex;
     gap: 20px;
     font-size: 18px;
+    /* height: 100%; */
 }
 .nav-item {
     position: relative;
@@ -39,7 +40,7 @@ nav .container {
 }
 
 .hero {
-    height: 80vh;
+    height: 300px;
     position: relative;
 }
 
@@ -126,21 +127,17 @@ nav .container {
 section {
     padding: 20px 0;
 }
-section:nth-of-type(odd) {
-    background: radial-gradient(
-        circle at bottom left,
-        var(--primary-muted) 0%,
-        var(--backgroundsecondary) 50%,
-        var(--background) 100%
-    );
+section:first-child{
+    border-top: 1px solid var(--border);
 }
-section:nth-of-type(even) {
-    background: radial-gradient(
-        circle at bottom right,
-        var(--primary-muted) 0%,
-        var(--backgroundsecondary) 50%,
-        var(--background) 100%
-    );
+section:nth-child(even){
+    background: var(--primary-muted2);
+    backdrop-filter: blur(10px);
+}
+
+section.nobg{
+    background: none;
+    backdrop-filter: none;
 }
 
 .divided {
@@ -268,6 +265,7 @@ nav.scrolled {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom: 1px solid var(--primary);
+    background: var(--primary-muted2);
 }
 nav:has(.active) {
     backdrop-filter: blur(30px);
@@ -275,6 +273,7 @@ nav:has(.active) {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom: 1px solid var(--primary);
+    background: var(--primary-muted2);
 }
 .hero {
     padding-top: 80px;
@@ -600,4 +599,10 @@ section {
 }
 .ticket-container:not(:last-child){
     margin-bottom: 20px;
+}
+.background-fixed{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100dvh;
 }
