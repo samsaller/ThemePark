@@ -1,4 +1,4 @@
-@media (max-width: 750px) {
+@media (max-width: 950px) {
     .burger {
         display: block;
         position: relative;
@@ -89,9 +89,9 @@
     }
     p {
         font-size: 14px;
-        text-align: justify;
+        text-align: justify !important;
     }
-    .container.divided {
+    .container.divided, .ticket-container.divided {
         flex-direction: column;
     }
     .card-title {
@@ -110,10 +110,12 @@
     .container.burger-container {
         display: flex;
         height: calc(100dvh - 80px);
+        transform: translateY(0dvh) scale(1);
     }
     .container.burger-container.deactive {
         height: 0;
         padding: 0px;
+        transform: translateY(-100dvh) scale(0.1);
     }
     .nav-links {
         flex-direction: column;
@@ -130,6 +132,12 @@
     }
     footer{
         padding: 0;
+        font-size: 8px;
+    }
+    .list-item{
         font-size: 12px;
+    }
+    .divided{
+        gap: 20px;
     }
 }

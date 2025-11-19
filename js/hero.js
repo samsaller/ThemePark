@@ -4,8 +4,8 @@ const heroQuote = document.querySelector(".hero-quote-home");
 
 const heroQuotes = [
     "THE FUTURE OF FUN",
-    "WHERE GAMES COME ALIVE",
-    "PLAY. HAVE FUN. CONNECT.",
+    "WHERE FUTURE IS TODAY",
+    "STEP INTO THE FUTURE",
     "YOUR ADVENTURE AWAITS",
     "LEVEL UP YOUR LIFE",
     "DISCOVER. PLAY. ENJOY.",

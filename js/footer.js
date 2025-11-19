@@ -1,10 +1,5 @@
 const footer = document.querySelector("footer");
-const contributors = ["KAIU", "GZX", "KGH", "HS", "KKK"];
 
-let copyrightText = "©";
-
-contributors.forEach((contributor) => {
-    copyrightText += ` ${contributor}`;
-});
+let copyrightText = "© 2025 All right reserved. By KAIU, KKK, HS, KJH and GZX.";
 
 footer.querySelector(".copyright").textContent = copyrightText;

@@ -90,6 +90,11 @@ a {
     box-shadow: 0 0 10px var(--primary);
 }
 
+.abutton.wide{
+    width: 100%;
+    text-align: center;
+}
+
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
     -webkit-appearance: none;
