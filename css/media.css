@@ -140,4 +140,7 @@
     .divided{
         gap: 20px;
     }
+    .nerd-section p{
+        text-align: center !important;
+    }
 }

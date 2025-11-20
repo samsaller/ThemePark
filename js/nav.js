@@ -13,6 +13,7 @@ const navLinksObj = [
     { text: "Events", href: basePath + "pages/events.html" },
     { text: "Dining", href: basePath + "pages/dining.html" },
     { text: "About Us", href: basePath + "pages/about.html" },
+    { text: "For Visitors", href: basePath + "pages/visitor.html" },
 ];
 // <ul class="nav-links">
 //     <li class="muted nav-item"><a href="#">Blank</a></li>

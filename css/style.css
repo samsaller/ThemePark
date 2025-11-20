@@ -678,9 +678,36 @@ section {
 .map {
     aspect-ratio: unset;
 }
-.toc-agreement a{
+.toc-agreement a {
     display: inline;
     width: fit-content;
     color: var(--primary);
     text-decoration: underline;
+}
+
+.ticket-container .section-block {
+    width: 100%;
+}
+.ticket-container .left,
+.ticket-container .right {
+    width: 100%;
+}
+.nerd-section .subtitle {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+.nerd-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.nerd-list > .list-item {
+    color: var(--primarylight);
+}
+.nerd-list .list .list-item {
+    color: var(--text) !important;
+}
+.nerd-list .list{
+    padding-top: 5px;
 }
