@@ -112,31 +112,38 @@
                                 required></textarea>
                         </div>
                         <div class="checkbox">
-                            <label>Preferred Response Method</label>
+                            <div>Preferred Response Method</div>
                             <div>
                                 <input
                                     type="checkbox"
-                                    name="method"
+                                    name="method-email"
                                     id="method-email"
-                                    value="Email"
                                     checked />
-                                Email
+                                <label for="method-email">Email</label>
                             </div>
                             <div>
                                 <input
                                     type="checkbox"
-                                    name="method"
-                                    id="method-phone"
-                                    value="Phone Call" />
-                                Phone Call
+                                    name="method-phone"
+                                    id="method-phone" />
+                                <label for="method-phone">Phone Call</label>
                             </div>
                             <div>
                                 <input
                                     type="checkbox"
-                                    name="method"
-                                    id="method-text"
-                                    value="Text Message" />
-                                Text Message
+                                    name="method-text"
+                                    id="method-text" />
+                                <label for="method-text">Text Message</label>
+                            </div>
+                        </div>
+                        <div class="toc-agreement checkbox">
+                            <div>
+                                <input
+                                    type="checkbox"
+                                    name="toc-agreement"
+                                    id="toc-agreement"
+                                    required />
+                                <label for="toc-agreement">Agree with <a target="_blank" href="./tickets.html#ToC">Terms & Conditions</a></label>
                             </div>
                         </div>
                         <button

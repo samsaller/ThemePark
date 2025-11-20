@@ -127,15 +127,15 @@ nav .container {
 section {
     padding: 20px 0;
 }
-section:first-child{
+section:first-child {
     border-top: 1px solid var(--border);
 }
-section:nth-child(even){
+section:nth-child(even) {
     background: var(--primary-muted2);
     backdrop-filter: blur(10px);
 }
 
-section.nobg{
+section.nobg {
     background: none;
     backdrop-filter: none;
 }
@@ -500,15 +500,14 @@ section {
     10% {
         opacity: 1;
     }
-    25%{
+    25% {
         box-shadow: 0px 0px 20px -5px var(--primary);
-
     }
     50% {
         transform: perspective(1000px) rotateY(-5deg) rotateX(-5deg);
         box-shadow: 0px 0px 30px -20px var(--primary);
     }
-    75%{
+    75% {
         box-shadow: 0px 0px 20px -5px var(--primary);
     }
     90% {
@@ -591,32 +590,32 @@ section {
 .aboutus-scrolldown {
     padding-top: 10px;
 }
-.ticket-container{
+.ticket-container {
     border: 1px solid var(--border);
     border-radius: 20px;
     background: var(--primary-muted2);
     padding: 20px;
 }
-.ticket-container:not(:last-child){
+.ticket-container:not(:last-child) {
     margin-bottom: 20px;
 }
-.background-fixed{
+.background-fixed {
     position: fixed;
     z-index: -1;
     width: 100%;
     height: 100dvh;
 }
 
-.list-item.special{
+.list-item.special {
     list-style: square;
 }
 
-.events{
+.events {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
 }
-.event{
+.event {
     background: var(--primary-muted2);
     padding: 20px;
     min-width: 260px;
@@ -626,56 +625,62 @@ section {
     border: 1px solid var(--border);
     cursor: pointer;
 }
-.event:hover{
+.event:hover {
     scale: 1.02;
     box-shadow: 0 0 10px var(--primary);
 }
-.event-img{
+.event-img {
     aspect-ratio: 1 / 1;
     background: var(--backgroundsecondary);
     overflow: hidden;
     border-radius: 20px;
 }
-.event-img img{
+.event-img img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
-.event-schedule{
+.event-schedule {
     text-align: center;
     padding: 15px 0 5px;
     color: var(--primary);
     font-size: 24px;
-
 }
-.event-location{
+.event-location {
     text-align: center;
     color: var(--primarylight);
     padding-bottom: 15px;
     font-size: 18px;
 }
 @keyframes carousel {
-    0%{
+    0% {
         opacity: 0;
     }
-    10%{
+    10% {
         opacity: 1;
     }
-    90%{
+    90% {
         opacity: 1;
     }
-    100%{
+    100% {
         opacity: 0;
     }
 }
 
-.events-carousel, .foodstalls-carousel{
+.events-carousel,
+.foodstalls-carousel {
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
-.event-features p{
+.event-features p {
     text-align: justify;
 }
-.map{
+.map {
     aspect-ratio: unset;
+}
+.toc-agreement a{
+    display: inline;
+    width: fit-content;
+    color: var(--primary);
+    text-decoration: underline;
 }
